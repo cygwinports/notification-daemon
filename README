@@ -1,0 +1,89 @@
+notification-daemon
+------------------------------------------
+GNOME desktop notification daemon
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  GConf2-2.16.1-1
+  atk-1.18.0-1
+  gdk-pixbuf2-2.10.12-1
+  glib2-2.12.12-1
+  gtk2-x11-2.10.12-1
+  libX11_6-1.1.1-1
+  libcairo2-1.4.6-1
+  libdbus-glib_1_2-0.73-1
+  libdbus1_3-1.0.2-1
+  libsexy-0.1.11-1
+  libwnck1_18-2.16.3-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  bison-2.3-1
+  cygport-0.2.9-1
+  flex-2.5.33-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gnome-common-2.12.0-2
+  gnome-doc-utils-0.8.0-1
+  gtk-doc-1.7-1
+  intltool-0.35.4-1
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  scrollkeeper-0.3.14-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.galago-project.org/
+
+Canonical download:
+  http://www.galago-project.org/files/releases/source/notification-daemon/
+
+-------------------------------------------
+
+Build instructions:
+  unpack notification-daemon-0.3.7-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./notification-daemon-0.3.7-X.cygport all
+
+This will create:
+  /usr/src/notification-daemon-0.3.7-X-src.tar.bz2
+  /usr/src/notification-daemon-0.3.7-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/gconf/schemas/notification-daemon.schemas
+  /etc/postinstall/notification-daemon.sh
+  /etc/preremove/notification-daemon.sh
+  /usr/lib/notification-daemon-1.0/engines/cygstandard.dll
+  /usr/lib/notification-daemon-1.0/engines/libstandard.la
+  /usr/sbin/notification-daemon.exe
+  /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+  /usr/share/doc/Cygwin/notification-daemon-0.3.7.README
+  /usr/share/doc/notification-daemon-0.3.7/AUTHORS
+  /usr/share/doc/notification-daemon-0.3.7/COPYING
+  /usr/share/doc/notification-daemon-0.3.7/ChangeLog
+  /usr/share/doc/notification-daemon-0.3.7/INSTALL
+  /usr/share/doc/notification-daemon-0.3.7/NEWS
+  /usr/share/locale/de/LC_MESSAGES/notification-daemon.mo
+  /usr/share/locale/nl/LC_MESSAGES/notification-daemon.mo
+  /usr/share/locale/sv/LC_MESSAGES/notification-daemon.mo
+
+------------------
+
+Port Notes:
+
+----- version 0.3.7-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
