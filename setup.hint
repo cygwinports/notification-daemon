@@ -1,4 +1,4 @@
 category: Gnome
-requires: cygwin GConf2 atk glib2 gtk2-x11 libX11_6 libcairo2 libdbus-glib-1_2 libdbus1_3 libsexy libwnck1_18
+requires: cygwin GConf2 atk glib2 gtk2-x11 libX11_6 libcairo2 libdbus-glib-1_2 libdbus1_3 libsexy libwnck1_22
 sdesc: "GNOME desktop notification daemon"
 ldesc: "GNOME desktop notification daemon"

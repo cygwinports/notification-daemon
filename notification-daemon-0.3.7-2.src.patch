@@ -1,0 +1,51 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/notification-daemon-0.3.7/src/daemon/engines.c src/notification-daemon-0.3.7/src/daemon/engines.c
+--- origsrc/notification-daemon-0.3.7/src/daemon/engines.c	2007-02-28 01:18:48.000000000 -0600
++++ src/notification-daemon-0.3.7/src/daemon/engines.c	2007-06-01 20:31:17.625000000 -0500
+@@ -40,12 +40,9 @@
+ load_theme_engine(const char *name)
+ {
+ 	ThemeEngine *engine;
+-	char *filename;
+ 	char *path;
+ 
+-	filename = g_strdup_printf("lib%s.so", name);
+-	path = g_build_filename(ENGINES_DIR, filename, NULL);
+-	g_free(filename);
++	path = g_module_build_path(ENGINES_DIR, name);
+ 
+ 	engine = g_new0(ThemeEngine, 1);
+ 	engine->ref_count = 1;
+@@ -96,7 +93,7 @@
+ 
+ error:
+ 	if (engine->module != NULL && !g_module_close(engine->module))
+-		g_warning("%s: %s", filename, g_module_error());
++		g_warning("%s: %s", name, g_module_error());
+ 
+ 	g_free(engine);
+ 	return NULL;
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/notification-daemon-0.3.7/src/themes/bubble/Makefile.am src/notification-daemon-0.3.7/src/themes/bubble/Makefile.am
+--- origsrc/notification-daemon-0.3.7/src/themes/bubble/Makefile.am	2006-10-08 16:04:02.000000000 -0500
++++ src/notification-daemon-0.3.7/src/themes/bubble/Makefile.am	2007-06-01 20:31:17.625000000 -0500
+@@ -9,7 +9,8 @@
+ 	eggnotificationbubblewidget.c \
+ 	theme.c
+ 
+-libbubble_la_LDFLAGS = -module -avoid-version
++libbubble_la_LDFLAGS = -module -avoid-version -no-undefined
++libbubble_la_LIBADD = $(NOTIFICATION_DAEMON_LIBS)
+ 
+ INCLUDES = \
+ 	$(NOTIFICATION_DAEMON_CFLAGS)
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x Makefile.in -x makefile.in -x configure -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/notification-daemon-0.3.7/src/themes/standard/Makefile.am src/notification-daemon-0.3.7/src/themes/standard/Makefile.am
+--- origsrc/notification-daemon-0.3.7/src/themes/standard/Makefile.am	2006-10-08 16:04:02.000000000 -0500
++++ src/notification-daemon-0.3.7/src/themes/standard/Makefile.am	2007-06-01 20:31:17.625000000 -0500
+@@ -3,7 +3,7 @@
+ engine_LTLIBRARIES = libstandard.la
+ 
+ libstandard_la_SOURCES = theme.c
+-libstandard_la_LDFLAGS = -module -avoid-version
++libstandard_la_LDFLAGS = -module -avoid-version -no-undefined
+ libstandard_la_LIBADD  = $(NOTIFICATION_DAEMON_LIBS)
+ 
+ INCLUDES = $(NOTIFICATION_DAEMON_CFLAGS)
