@@ -3,42 +3,40 @@ notification-daemon
 GNOME desktop notification daemon
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  atk-1.22.0-1
-  GConf2-2.22.0-1
-  gdk-pixbuf2-2.12.12-1
-  glib2-2.16.6-1
-  gnome-audio-2.22.2-1
-  gstreamer010-0.10.21-1
-  gstreamer010-plugins-base
-  gstreamer010-plugins-gconf
-  gstreamer010-plugins-good
-  gstreamer010-plugins-oss
-  gtk2-x11-2.12.12-1
-  libcairo2-1.8.2-1
-  libdbus-glib_1_2-0.76-1
-  libdbus1_3-1.2.3-1
-  libglade2-2.6.3-1
-  libgnome2-2.22.0-1
-  libintl8-0.17-2
-  libnotify1-0.4.5-1
-  libsexy-0.1.11-1
-  libwnck1_22-2.22.3-1
-  libX11_6-1.1.5-1
+  cygwin-1.7.0-45
+  gstreamer0.10-plugins-base
+  gstreamer0.10-plugins-gconf
+  gstreamer0.10-plugins-good
+  gstreamer0.10-plugins-oss
+  libatk1.0_0-1.26.0-1
+  libcairo2-1.8.6-10
+  libdbus-glib_1_2-0.80-10
+  libdbus1_3-1.2.12-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgdk_pixbuf2.0_0-2.16.1-1
+  libglade2.0_0-2.6.4-1
+  libglib2.0_0-2.20.1-1
+  libgstreamer0.10_0-0.10.22-10
+  libgtk2.0_0-2.16.1-1
+  libintl8-0.17-10
+  libnotify1-0.4.5-10
+  libwnck1_22-2.26.0-1
+  libX11_6-1.2-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.9-1.9.6-3
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
   binutils-20080624-2
-  cygport-0.4.2-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.24.0-1
-  intltool-0.40.5-1
-  libtool-2.2.6a-1
-  make-3.81-1
-  pkg-config-0.23a-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  intltool-0.40.6-1
+  libtool-2.2.7a-12
+  make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical website:
@@ -73,11 +71,10 @@ Files included in the binary package:
   /usr/lib/notification-daemon-1.0/notification-daemon.exe
   /usr/share/applications/notification-properties.desktop
   /usr/share/dbus-1/services/org.freedesktop.Notifications.service
-  /usr/share/doc/notification-daemon-0.4.0/AUTHORS
-  /usr/share/doc/notification-daemon-0.4.0/COPYING
-  /usr/share/doc/notification-daemon-0.4.0/ChangeLog
-  /usr/share/doc/notification-daemon-0.4.0/INSTALL
-  /usr/share/doc/notification-daemon-0.4.0/NEWS
+  /usr/share/doc/notification-daemon/AUTHORS
+  /usr/share/doc/notification-daemon/COPYING
+  /usr/share/doc/notification-daemon/ChangeLog
+  /usr/share/doc/notification-daemon/NEWS
   /usr/share/icons/hicolor/16x16/apps/notification-properties.png
   /usr/share/icons/hicolor/22x22/apps/notification-properties.png
   /usr/share/icons/hicolor/24x24/apps/notification-properties.png
@@ -96,14 +93,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 0.4.0-1 -----
-Version bump.
-
------ version 0.3.7-2 -----
-Rebuilt for ABI change in libwnck-2.20.
-
------ version 0.3.7-1 -----
-Initial release for Cygwin.
+----- version 0.4.0-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

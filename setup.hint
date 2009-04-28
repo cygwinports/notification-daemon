@@ -1,4 +1,4 @@
 category: Gnome
-requires: cygwin atk GConf2 gdk-pixbuf2 glib2 gnome-audio gstreamer010 gstreamer010-plugins-base gstreamer010-plugins-gconf gstreamer010-plugins-good gstreamer010-plugins-oss gtk2-x11 libcairo2 libdbus-glib-1_2 libdbus1_3 libglade2 libgnome2 libintl8 libnotify1 libsexy2 libwnck1_22 libX11_6
+requires: cygwin GConf2 gstreamer0.10-plugins-base gstreamer0.10-plugins-gconf gstreamer0.10-plugins-good gstreamer0.10-plugins-oss libatk1.0_0 libcairo2 libdbus-glib-1_2 libdbus1_3 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgstreamer0.10_0 libgtk2.0_0 libintl8 libnotify1 libwnck1_22 libX11_6
 sdesc: "GNOME desktop notification daemon"
 ldesc: "GNOME desktop notification daemon"
