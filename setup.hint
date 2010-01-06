@@ -1,4 +1,4 @@
 category: Gnome
-requires: GConf2 gstreamer0.10-plugins-base gstreamer0.10-plugins-gconf gstreamer0.10-plugins-good gstreamer0.10-plugins-oss libatk1.0_0 libcairo2 libdbus-glib-1_2 libdbus1_3 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgstreamer0.10_0 libgtk2.0_0 libintl8 libnotify1 libwnck1_22 libX11_6
+requires: GConf2 libatk1.0_0 libcairo2 libdbus-glib-1_2 libdbus1_3 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgstreamer0.10_0 libgtk2.0_0 libintl8 libnotify1 libwnck1_22 libX11_6
 sdesc: "GNOME desktop notification daemon"
 ldesc: "GNOME desktop notification daemon"

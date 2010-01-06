@@ -4,7 +4,8 @@ DESCRIPTION="GNOME desktop notification daemon"
 HOMEPAGE="http://www.galago-project.org/"
 SRC_URI="http://www.galago-project.org/files/releases/source/${PN}/${P}.tar.bz2"
 PATCH_URI="0.4.0-gmodule.patch
-           0.4.0-gtk_label.patch"
+           0.4.0-gtk_label.patch
+           mirror://portage/x11-misc/${PN}/files/${P}-report-sound-capability.patch"
 
 DIFF_EXCLUDES="*.service"
 
