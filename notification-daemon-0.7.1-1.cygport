@@ -3,8 +3,6 @@ inherit gnome2
 DESCRIPTION="GNOME desktop notification daemon"
 HOMEPAGE="http://www.galago-project.org/"
 
-PATCH_URI="0.5.0-gmodule.patch"
-
 DIFF_EXCLUDES="*.service"
 
 CYGCONF_ARGS="--libexecdir=/usr/bin"
