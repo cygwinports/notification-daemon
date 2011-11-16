@@ -1,4 +1,4 @@
 category: Gnome
-requires: libatk1.0_0 libcairo2 libcanberra-gtk3_0 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk3_0 libintl8 libX11_6
+requires: dbus libatk1.0_0 libcairo2 libcanberra-gtk3_0 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk3_0 libintl8 libX11_6
 sdesc: "GNOME desktop notification daemon"
 ldesc: "GNOME desktop notification daemon"
