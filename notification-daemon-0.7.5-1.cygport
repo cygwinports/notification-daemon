@@ -1,0 +1,12 @@
+inherit gnome2
+
+CATEGORY="Gnome"
+SUMMARY="GNOME desktop notification daemon"
+DESCRIPTION="An implementation of the Desktop Notifications Specification
+for the GNOME desktop, through which applications can generate passive
+popups to notify the user of events in an asynchronous manner."
+HOMEPAGE="http://www.galago-project.org/"
+
+DIFF_EXCLUDES="*.service"
+
+CYGCONF_ARGS="--libexecdir=/usr/bin"
