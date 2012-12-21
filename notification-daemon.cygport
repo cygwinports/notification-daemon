@@ -1,6 +1,9 @@
 inherit gnome2
 
-CATEGORY="Gnome"
+NAME="notification-daemon"
+VERSION=0.7.6
+RELEASE=1
+CATEGORY="GNOME"
 SUMMARY="GNOME desktop notification daemon"
 DESCRIPTION="An implementation of the Desktop Notifications Specification
 for the GNOME desktop, through which applications can generate passive
