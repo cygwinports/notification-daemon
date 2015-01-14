@@ -1,0 +1,13 @@
+Not sure what is causing this to be reached, but it is (at least on x64).
+
+--- origsrc/notification-daemon-3.14.1/src/nd-notification.c	2014-11-24 12:32:06.000000000 -0600
++++ src/notification-daemon-3.14.1/src/nd-notification.c	2015-01-13 18:45:43.677417100 -0600
+@@ -243,8 +243,6 @@ hint_to_boolean (NdNotification *notific
+                 return TRUE;
+         } else if (g_variant_is_of_type (value, G_VARIANT_TYPE_BYTE)) {
+                 return (g_variant_get_byte (value) != 0);
+-        } else {
+-                g_assert_not_reached ();
+         }
+ 
+         return FALSE;
