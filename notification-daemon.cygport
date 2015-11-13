@@ -1,14 +1,12 @@
 inherit gnome2
 
 NAME="notification-daemon"
-VERSION=3.14.1
-RELEASE=3
+VERSION=3.18.1
+RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME desktop notification daemon"
 DESCRIPTION="An implementation of the Desktop Notifications Specification
 for the GNOME desktop, through which applications can generate passive
 popups to notify the user of events in an asynchronous manner."
-
-PATCH_URI="3.14.1-fix-crash.patch"
 
 DIFF_EXCLUDES="*.service"
