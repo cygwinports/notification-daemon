@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="notification-daemon"
-VERSION=3.18.2
+VERSION=3.20.0
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME desktop notification daemon"
